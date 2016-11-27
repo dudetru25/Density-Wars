@@ -11,4 +11,5 @@ export interface IGameUnit {
   weapon:IWeapon;
   takeDamage:(amount)=>void;
   explode:()=>void;
+  groupID
 }

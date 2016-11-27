@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const PATHS = {
   app: path.join(__dirname, '../client'),
-  build: path.join(__dirname, '../public')
+  build: path.join(__dirname, '../server/public')
 };
 
 module.exports = {
@@ -23,21 +23,24 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.js$/,
         loader: 'babel-loader',
-        include: [
-          path.resolve(__dirname, 'client'),
-        ],
-        exclude: /node_modules/
-
+        include: PATHS.src
       },
       {
-        test: /\.less$/,
-        loader: "style!css!less"
+        test: /\.pcss$/,
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+        ]
       },
       {
-        test: /\.css/,
-        loader: "style!css"
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   },

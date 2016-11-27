@@ -1,99 +1,46 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module build failed: Error: ENOENT: no such file or directory, open '/Users/nikos/WebstormProjects/Density-Wars/node  _modules/lodash/lodash.js'
-  
-  
-  - Error: ENOENT: no such file or directory, open '/Users/nikos/WebstormProjects/Density-Wars/node_modules/lodash/lod    ash.js'
-  
-  - compiler.js:76 
-    [Density-Wars]/[html-webpack-plugin]/lib/compiler.js:76:16
-  
-  - Compiler.js:251 Compiler.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compiler.js:251:10
-  
-  - Compiler.js:442 
-    [Density-Wars]/[webpack]/lib/Compiler.js:442:12
-  
-  - Tapable.js:81 next
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:81:11
-  
-  - CachePlugin.js:61 Compiler.<anonymous>
-    [Density-Wars]/[webpack]/lib/CachePlugin.js:61:4
-  
-  - Tapable.js:85 Compiler.applyPluginsAsync
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:85:13
-  
-  - Compiler.js:439 Compiler.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compiler.js:439:9
-  
-  - Tapable.js:73 Compilation.applyPluginsAsync
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:73:70
-  
-  - Compilation.js:621 Compilation.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compilation.js:621:18
-  
-  - Tapable.js:73 Compilation.applyPluginsAsync
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:73:70
-  
-  - Compilation.js:612 Compilation.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compilation.js:612:10
-  
-  - Tapable.js:73 Compilation.applyPluginsAsync
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:73:70
-  
-  - Compilation.js:607 Compilation.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compilation.js:607:9
-  
-  - Tapable.js:73 Compilation.applyPluginsAsync
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:73:70
-  
-  - Compilation.js:603 Compilation.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compilation.js:603:8
-  
-  - Tapable.js:73 Compilation.applyPluginsAsync
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:73:70
-  
-  - Compilation.js:551 Compilation.seal
-    [Density-Wars]/[webpack]/lib/Compilation.js:551:7
-  
-  - Compiler.js:436 Compiler.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compiler.js:436:15
-  
-  - Tapable.js:152 
-    [Density-Wars]/[webpack]/[tapable]/lib/Tapable.js:152:11
-  
-  - Compilation.js:444 Compilation.<anonymous>
-    [Density-Wars]/[webpack]/lib/Compilation.js:444:10
-  
-  - Compilation.js:420 
-    [Density-Wars]/[webpack]/lib/Compilation.js:420:12
-  
-  - Compilation.js:332 
-    [Density-Wars]/[webpack]/lib/Compilation.js:332:10
-  
-  - async.js:52 
-    [Density-Wars]/[webpack]/[async]/lib/async.js:52:16
-  
-  - async.js:246 done
-    [Density-Wars]/[webpack]/[async]/lib/async.js:246:17
-  
-  - async.js:44 
-    [Density-Wars]/[webpack]/[async]/lib/async.js:44:16
-  
-  - Compilation.js:332 
-    [Density-Wars]/[webpack]/lib/Compilation.js:332:10
-  
-  - async.js:52 
-    [Density-Wars]/[webpack]/[async]/lib/async.js:52:16
-  
-  - async.js:236 Object.async.forEachOf.async.eachOf
-    [Density-Wars]/[webpack]/[async]/lib/async.js:236:30
-  
-  - async.js:209 Object.async.forEach.async.each
-    [Density-Wars]/[webpack]/[async]/lib/async.js:209:22
-  
-  - Compilation.js:192 Compilation.addModuleDependencies
-    [Density-Wars]/[webpack]/lib/Compilation.js:192:8
-  
-</pre>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<canvas id="glcanvas">
+  Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+</canvas>
+<canvas id="gameOverlay">
+  Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+</canvas>
+
+<div id="usernamePopup" class=""></div>
+
+<div id="lobby"></div>
+
+<canvas id="map" width="192" height="192" style="bottom: 50px; left: 50px;"></canvas>
+
+<a href="https://github.com/QuantumInformation/Density-Wars">
+  <img style="position: absolute; top: 0; right: 0; border: 0;"
+       src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
+       alt="Fork me on GitHub"
+       data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+<section id="info">
+  <h1>Changelog</h1>
+  <h2>28th Dec 2015 </h2>
+  <p>Added center of mass marker</p>
+  <p>Initial fire between units (WIP)</p>
+  <h2>27th Dec 2015 </h2>
+  <p>Added unit movement</p>
+  <h2>25th Dec 2015 </h2>
+  <p>Added unit selection</p>
+</section>
+
+<section id="guide">
+  <h1>Guide</h1>
+  <p>Click on your blue spheres (+shift for multi-select) then click on the grid and they will move there</p>
+  <p>Click on an enemy unit (red) to shoot</p>
+  <p>The green box is the center of mass (more coming soon)</p>
+</section>
+
+</body>
+</html>
